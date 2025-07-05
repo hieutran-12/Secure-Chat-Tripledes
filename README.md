@@ -59,13 +59,13 @@
 ## 🗂️ Cấu trúc thư mục
 
 📦 Secure-Chat-Tripledes
-├── client/
-│ ├── index.html # Trang nhập tên người dùng
-│ ├── chat.html # Giao diện chat
-│ └── script.js # Xử lý mã hóa + giao tiếp WebSocket
-├── server/
-│ └── server.py # Server trung gian chuyển tiếp tin nhắn
-└── README.md
+├── client/ <br>
+│ ├── index.html # Trang nhập tên người dùng<br>
+│ ├── chat.html # Giao diện chat<br>
+│ └── script.js # Xử lý mã hóa + giao tiếp WebSocket<br>
+├── server/<br>
+│ └── server.py # Server trung gian chuyển tiếp tin nhắn<br>
+└── README.md<br>
 
 ## ▶️ Cách chạy ứng dụng
 
