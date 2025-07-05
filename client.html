@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secure WebSocket Chat</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Giao diện nhập tên người dùng, hiển thị khi chưa kết nối -->
+    <div class="container">
+      <div id="join-section">
+        <h2>Enter Your Username</h2>
+        <input
+          type="text"
+          id="username"
+          placeholder="Your username"
+          onkeypress="if(event.key === 'Enter') joinChat()"
+        />
+        <button onclick="joinChat()">Join Chat</button>
+      </div>
+      <!-- Giao diện chat chính, ẩn ban đầu, chỉ hiện khi người dùng đã kết nối -->
+      <div id="chat-section" style="display: none">
+        <div id="user-list">
+          <h3>Online Users</h3>
+          <div id="users"></div>
+        </div>
+        <div id="chat-area">
+          <h2>Welcome, <span id="current-user"></span></h2>
+          <div id="chat-box"></div>
+          <div id="message-form">
+            <input
+              type="text"
+              id="recipient"
+              placeholder="Recipient username"
+              onkeypress="if(event.key === 'Enter') sendMessage()"
+            />
+            <input
+              type="text"
+              id="message"
+              placeholder="Type a message"
+              onkeypress="if(event.key === 'Enter') sendMessage()"
+            />
+            <button onclick="sendMessage()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsencrypt/3.2.1/jsencrypt.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
